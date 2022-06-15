@@ -9,5 +9,5 @@ import Foundation
 import Alamofire
 
 protocol APIClientProtocol {
-    func currentWeather(lat: String, lon: String, appid: String, completion: @escaping APIResponseBlock<CurrentWeatherModel>)
+    func currentWeather(city: String, appid: String, unit: TemperatureUnit, completion: @escaping APIResponseBlock<CurrentWeatherModel>)
 }

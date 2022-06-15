@@ -8,8 +8,8 @@
 import Foundation
 
 extension APIClient {
-    func currentWeather(lat: String, lon: String, appid: String, completion: @escaping APIResponseBlock<CurrentWeatherModel>) {
-        let service = APICurrentWeatherService.currentWeather(lat: lat, lon: lon, appid: appid)
+    func currentWeather(city: String, appid: String, unit: TemperatureUnit, completion: @escaping APIResponseBlock<CurrentWeatherModel>) {
+        let service = APICurrentWeatherService.currentWeather(city: city, appid: appid, unit: unit)
         fetch(service: service, completion: completion)
     }
 }

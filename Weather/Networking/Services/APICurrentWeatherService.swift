@@ -8,8 +8,14 @@
 import Foundation
 import Alamofire
 
+enum TemperatureUnit: String {
+    case fahrenheit = "standard"
+    case celsius = "metric"
+    case kelvin = "imperial"
+}
+
 enum APICurrentWeatherService: APIBaseServiceProtocol {
-    case currentWeather(lat: String, lon: String, appid: String)
+    case currentWeather(city: String, appid: String, unit: TemperatureUnit)
     
     var method: HTTPMethod { .get }
     
@@ -22,11 +28,11 @@ enum APICurrentWeatherService: APIBaseServiceProtocol {
     
     var parameters: Parameters? {
         switch self {
-        case .currentWeather(let lat, let lon, let appid):
+        case .currentWeather(let city, let appid, let unit):
             return [
-                "lat": lat,
-                "lon": lon,
-                "appid": appid
+                "appid": appid,
+                "units": unit.rawValue,
+                "q": city
             ]
         }
     }

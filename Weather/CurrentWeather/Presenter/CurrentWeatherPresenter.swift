@@ -26,7 +26,7 @@ class CurrentWeatherPresenter: CurrentWeatherViewPresenterProtocol {
     }
     
     func getCurrentWeatherData() {
-        APIClient.shared.currentWeather(lat: "51.5085", lon: "-0.1257", appid: "9726445297a86d5b2ed46daafbd87bba", completion: { (result) in
+        APIClient.shared.currentWeather(city: "Lviv", appid: "9726445297a86d5b2ed46daafbd87bba", unit: .celsius, completion: { (result) in
             switch result {
             case .success(let response):
                 if let data = response.data {
