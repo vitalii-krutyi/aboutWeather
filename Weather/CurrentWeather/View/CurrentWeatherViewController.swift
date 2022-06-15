@@ -11,7 +11,7 @@ class CurrentWeatherViewController: UIViewController {
     
     //MARK:  - IBOutlets -
     @IBOutlet var backgroundView: UIView!
-    @IBOutlet var pickDownButton: UIView!
+    @IBOutlet weak var cityButton: UIButton!
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -23,16 +23,17 @@ class CurrentWeatherViewController: UIViewController {
         
         presenter.getCurrentWeatherData()
     }
-    
-    // MARK: - IBAction -
-    @IBAction func didPressedPickDownButton(_ sender: UIButton) {
-        
-    }
 }
 
 extension CurrentWeatherViewController: CurrentWeatherViewProtocol {
     func setCurrentWeather(currentWeather: CurrentWeatherModel) {
-        descriptionLabel.text = currentWeather.weather.first?.description
-        temperatureLabel.text = "\(currentWeather.main.temp)"
+        cityButton.setTitle(currentWeather.name, for: .normal)
+        
+        descriptionLabel.text = "   " + (currentWeather.weather.first?.description.capitalized ?? "") + "   "
+        descriptionLabel.layer.cornerRadius = 18
+        descriptionLabel.clipsToBounds = true
+        
+        temperatureLabel.text = "\(Int(currentWeather.main.temp)) °"
+        weatherImageView.image = UIImage(named: currentWeather.weather.first?.icon ?? "")
     }
 }
