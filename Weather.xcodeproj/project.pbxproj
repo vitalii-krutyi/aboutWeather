@@ -135,13 +135,13 @@
 			isa = PBXGroup;
 			children = (
 				62CDCF0F2822CE7000A863CB /* Networking */,
+				6249F61C2838DEB300A9DE3B /* CurrentWeather */,
 				62CDCEFB2822CD5B00A863CB /* AppDelegate.swift */,
 				62CDCEFD2822CD5B00A863CB /* SceneDelegate.swift */,
 				62089E20285765E600CBECB2 /* ModuleBuilder.swift */,
 				62CDCF042822CD5D00A863CB /* Assets.xcassets */,
 				62CDCF062822CD5D00A863CB /* LaunchScreen.storyboard */,
 				62CDCF092822CD5D00A863CB /* Info.plist */,
-				6249F61C2838DEB300A9DE3B /* CurrentWeather */,
 				62089E2228576DBB00CBECB2 /* Main.storyboard */,
 			);
 			path = Weather;

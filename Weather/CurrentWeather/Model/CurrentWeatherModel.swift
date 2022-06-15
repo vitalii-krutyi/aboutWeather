@@ -62,8 +62,8 @@ class Clouds: Codable {
 }
 
 class Sys: Codable {
-    let type: Int
-    let id: Int
+    //    let type: Int
+    //    let id: Int
     //    let message: Double
     let country: String
     let sunrise: Int
