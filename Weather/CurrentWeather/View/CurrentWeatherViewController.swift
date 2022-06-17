@@ -15,6 +15,9 @@ class CurrentWeatherViewController: UIViewController {
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var probabilityOfRainLabel: UILabel!
+    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var speedOfWindLabel: UILabel!
     
     var presenter: CurrentWeatherViewPresenterProtocol!
     
@@ -27,18 +30,22 @@ class CurrentWeatherViewController: UIViewController {
 
 extension CurrentWeatherViewController: CurrentWeatherViewProtocol {
     func setCurrentWeather(currentWeather: CurrentWeatherModel) {
-        cityButton.isHidden = false
-        temperatureLabel.isHidden = false
-        descriptionLabel.isHidden = false
-        weatherImageView.isHidden = false
-        
         cityButton.setTitle(currentWeather.name, for: .normal)
+        cityButton.isHidden = false
         
         descriptionLabel.text = "   " + (currentWeather.weather.first?.description.capitalized ?? "") + "   "
+        descriptionLabel.isHidden = false
         descriptionLabel.layer.cornerRadius = 18
         descriptionLabel.clipsToBounds = true
         
         temperatureLabel.text = "\(Int(currentWeather.main.temp)) °"
+        temperatureLabel.isHidden = false
+        
         weatherImageView.image = UIImage(named: currentWeather.weather.first?.icon ?? "")
+        weatherImageView.isHidden = false
+        
+        probabilityOfRainLabel.text = "\(currentWeather.main.humidity)%"
+        pressureLabel.text = "\(currentWeather.main.pressure) Bar"
+        speedOfWindLabel.text = "\(presenter.convertSpeedWind(speed: currentWeather.wind.speed)) km/h"
     }
 }
