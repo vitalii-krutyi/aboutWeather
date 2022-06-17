@@ -15,6 +15,7 @@ protocol CurrentWeatherViewPresenterProtocol: AnyObject {
     init(view: CurrentWeatherViewProtocol)
     func getCurrentWeatherData()
     func showCurrentWeather()
+    func convertSpeedWind(speed: Double) -> String
 }
 
 class CurrentWeatherPresenter: CurrentWeatherViewPresenterProtocol {
@@ -44,5 +45,11 @@ class CurrentWeatherPresenter: CurrentWeatherViewPresenterProtocol {
         if let data = currentWeatherData {
             self.view.setCurrentWeather(currentWeather: data)
         }
+    }
+}
+
+extension CurrentWeatherPresenter {
+    func convertSpeedWind(speed: Double) -> String {
+        return String(format: "%.1f", speed * 3.6)
     }
 }
