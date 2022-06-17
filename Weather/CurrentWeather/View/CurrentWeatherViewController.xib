@@ -22,20 +22,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tC-uL-Dnz">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tC-uL-Dnz">
                     <rect key="frame" x="20" y="105" width="374" height="71"/>
                     <fontDescription key="fontDescription" type="system" pointSize="59"/>
                     <color key="textColor" red="0.3388686214446382" green="0.28066667228773279" blue="0.44034354896840366" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ljz-ti-s5l">
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ljz-ti-s5l">
                     <rect key="frame" x="191" y="0.0" width="223" height="228"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="228" id="MmD-me-5IN"/>
                         <constraint firstAttribute="width" constant="223" id="d5E-zq-hws"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yn2-Mg-ZUJ">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yn2-Mg-ZUJ">
                     <rect key="frame" x="10" y="49" width="192" height="41"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="41" id="fCU-kP-vVj"/>
@@ -53,7 +53,7 @@
                         <color key="baseForegroundColor" red="0.1484823855464327" green="0.19118552183846074" blue="0.37066753256758211" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's hot today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SN4-0r-6tE">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's hot today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SN4-0r-6tE">
                     <rect key="frame" x="20" y="196" width="99.5" height="43"/>
                     <color key="backgroundColor" red="0.94887953999999997" green="0.93741083150000004" blue="0.92941045759999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
